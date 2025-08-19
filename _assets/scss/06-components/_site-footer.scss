@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* ================================================================================ */ 
+/* Footer */ 
+/* フッターのスタイル */ 
+/* ================================================================================ */ 
+
+.site-footer {
+    padding: 7.6rem 2.4rem 3.2rem;
+    position: relative;
+    z-index: 30;
+    @media #{$md-devices} {
+        padding: 6.7rem 2.4rem 4.2rem;
+    }
+    &:after {
+        width: 245%;
+        border-radius: 100%;
+        background-color: $color_main;
+        aspect-ratio: 1;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        @media #{$md-devices} {
+            width: 290%;
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 14.9rem;
+        aspect-ratio: 298 / 212;
+        background-image: url(../../assets/images/footer-character_sp.png);
+        background-size: cover;
+        left: 0;
+        right: 0;
+        top: -6rem;
+        margin: auto;
+        @media #{$md-devices} {
+            width: 19rem;
+            aspect-ratio: 379 / 306;
+            background-image: url(../../assets/images/footer-character_pc.png);
+            top: -9rem;
+        }
+    }
+}
+
+.site-footer-sns__title {
+    max-width: 18rem;
+    margin: 0 auto 2.4rem;
+    @media #{$md-devices} {
+        max-width: 24.2rem;
+        margin-bottom: 4rem;
+    }
+}
+
+.site-footer-sns-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+    margin-bottom: 4.8rem;
+    @media #{$md-devices} {
+        gap: 2.4rem;
+        margin-bottom: 6.4rem;
+    }
+}
+
+.site-footer-sns__link {
+    max-width: 4rem;
+    display: block;
+    @media #{$md-devices} {
+        max-width: 6rem;
+    }
+}
+
+.site-footer-nav {
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+    list-style: none;
+    margin: 0 0 3.2rem;
+    padding: 0;
+    @media #{$md-devices} {
+        gap: 7.2rem;
+        margin-bottom: 3.6rem;
+    }
+}
+
+.site-footer-nav__link {
+    display: block;
+    font-size: 1.1rem;
+    color: #fff;
+    @media #{$md-devices} {
+        font-size: 1.3rem;
+    }
+}
+
+.copyright {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #fff;
+    @media #{$md-devices} {
+        font-size: 1.3rem;
+    }
+}

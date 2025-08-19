@@ -1,0 +1,72 @@
+@charset "UTF-8";
+// ================================================================================
+// Variable
+// NOTE:グローバルな変数を設定。それ以外はそのscssファイルのみで完結。
+
+// ----------------------------------------------------------------
+// Responsive
+// ----------------------------------------------------------------
+
+/*
+	Xtra Small Device : 320pxまで
+	Small Device : 960pxまで
+	Middle Device : 961pxから
+	Large Device : 1200pxから
+	Xtra Large Device : 1440pxから
+	2Xtra Large Device : 1960pxまで
+*/
+
+// NOTE: CSS Variables と一部重複
+//$breakpoint_xs: 320px;
+$breakpoint_sm: 375px;
+$breakpoint_md: 768px;
+$breakpoint_lg: 1262px;
+$breakpoint_xl: 1440px;
+$breakpoint_2xl: 1960px;
+
+// NOTE: メニュー用
+//$breakpoint_laptop: 1200px;
+
+// iPhone SE サイズ
+$xs_devices_only: "only screen and ( max-width: #{$breakpoint_sm} )";
+
+// モバイルまで
+$sm_devices_only: "only screen and ( max-width: #{$breakpoint_md - 1} )";
+
+// タブレット以上
+$md_devices: "print, only screen and ( min-width: #{$breakpoint_md} )";
+
+// 1080~
+$lg_devices: "print, only screen and ( min-width: #{$breakpoint_lg} )";
+
+// 1440~
+$xl_devices: "print, only screen and ( min-width: #{$breakpoint_xl} )";
+
+// 1960~
+$xxl_devices: "print, only screen and ( min-width: #{$breakpoint_2xl} )";
+
+
+
+// ----------------------------------------------------------------
+// Scale, Size
+// ----------------------------------------------------------------
+
+// ----------------------------------------------------------------
+// Font Family
+// ----------------------------------------------------------------
+
+// ベースフォント
+$font: "fot-tsukuardgothic-std", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+
+// ----------------------------------------------------------------
+// Color
+// ----------------------------------------------------------------
+
+$color_default: #595757;
+$color_main : #F65275;
+$color_primary : #F9AFC7;
+$color_secondary : #FFC72C;
+$color_tertiary : #9DD340;
+$color_border : #9FA0A0;
+
+

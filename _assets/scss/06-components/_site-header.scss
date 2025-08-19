@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/* ================================================================================ */ 
+/* Header */ 
+/* ヘッダーのスタイル */ 
+/* ================================================================================ */ 
+
+
+.site-header {
+    position: absolute;
+    top: 6rem;
+    left: 4rem;
+    right: 4rem;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media #{$md-devices} {
+        top: 5.4rem;
+        left: 6.4rem;
+        right: 6.4rem;
+    }
+}
+
+.site-branding {
+    max-width: 21.5rem;
+}
+
+.site-navigation {
+    position: absolute;
+    bottom: 0;
+    left: 8rem;
+    z-index: 1;
+    @media #{$sm-devices-only} {
+        display: none;
+    }
+}
+
+.site-navigation-lists {
+    list-style: none;
+    padding: 0 0 1.6rem 3.2rem;
+    border-left: 1px solid #fff;
+    margin: 0;
+}
+
+.site-navigation-list {
+    margin-bottom: 2.4rem;
+}
+
+.site-navigation-list__link {
+    font-size: 1.5rem;
+    color: #fff;
+    display: block;
+    font-weight: 700;
+}
+
+.site-menu-button {
+    width: 4rem;
+    height: 3.5rem;
+    position: relative;
+}
+
+.dropdown-icon__line {
+    border-radius: 100vmax;
+    background-color: #fff;
+    height: .5rem;
+    width: 100%;
+    inset: 0;
+    margin: auto;
+    z-index: 1;
+    position: absolute;
+    &:first-of-type {
+        bottom: auto;
+    }
+    &:last-of-type {
+        top: auto;
+    }
+}

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+// ================================================================================
+// Mixin
+// グローバルなmixinはここに格納します。それ以外はそのscssファイルのみで完結。
+// ================================================================================
+
+@mixin mx-mq-min($bp) {
+    @media (min-width: $bp) {
+		@content;
+	}
+}
+
+
+// -----------------------------------------------------------------
+// アイコン関連
+// -----------------------------------------------------------------
+
+// 疑似要素の背景設定
+@mixin ps-icon($t: 0, $r: 0, $b: 0, $l: 0) {
+	box-sizing: border-box;
+	content: "";
+	display: block;
+	position: absolute;
+	top: $t;
+	right: $r;
+	bottom: $b;
+	left: $l;
+	margin: auto;
+}
+
+// "→" の矢印アイコン
+@mixin background-icon-arrow($color: "121212") {
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" fill="none"><path stroke="%23#{$color}" stroke-width=".75" d="m8.24 1.045 3.976 3.976L8.24 8.998M12.21 5.027H.135"/></svg>');
+}
+
+
+// -----------------------------------------------------------------
+// ホバー関連
+// NOTE: 参考 https://zenn.dev/kagan/articles/css-hover-style
+// -----------------------------------------------------------------
+
+// デフォルト使用
+@mixin hover {
+	transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+	backface-visibility: hidden;
+	@media (hover: hover){
+		&:where(:any-link, :enabled, summary):hover {
+			opacity: .7;
+		}
+	}
+}
+
+// class 依存
+@mixin hover-customize {
+	transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+	backface-visibility: hidden;
+	@media (hover: hover){
+		&:where(:any-link, :enabled, summary):hover {
+			@content;
+		}
+	}
+}
+
+
+// -----------------------------------------------------------------
+// アニメーション関連
+// -----------------------------------------------------------------
+
+// プロパティ・秒数指定
+@mixin anime($property, $duration) {
+	transition: $property $duration cubic-bezier(0.4, 0.0, 0.2, 1);
+	backface-visibility: hidden;
+}
+
+// allアニメーション
+@mixin anime-all {
+	transition: all .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+	backface-visibility: hidden;
+}
+
+// -----------------------------------------------------------------
+// ユーティリティ関連
+// -----------------------------------------------------------------
+
+// margin, padding リセット
+@mixin reset {
+	padding: 0;
+	margin: 0;
+}
+
+// inline-blockレイアウト
+@mixin ib($value) {
+	text-align: $value;
+	letter-spacing: -.40em;
+}
+
+@mixin ib_child {
+	display: inline-block;
+	letter-spacing: normal;
+}
