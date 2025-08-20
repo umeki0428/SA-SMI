@@ -12,17 +12,17 @@
 html {
 	width: 100%;
 	height: 100%;
-	font-size: calc((14px + (200vw - 640px) / 55) * .625);
-	@include mx-mq-min(375px) {
-		font-size: calc((16px * .625));
-	}
-	@include mx-mq-min(768px) {
-		font-size: calc((13px + (200vw - 1920px) / 192) * .625);
-	}
-	@include mx-mq-min(1440px) {
-		font-size: calc((16px + (200vw - 2560px) / 256) * .625);
-	}
-	// font-size: 62.5%;
+	// font-size: calc((14px + (200vw - 640px) / 55) * .625);
+	// @include mx-mq-min(375px) {
+	// 	font-size: calc((16px * .625));
+	// }
+	// @include mx-mq-min(768px) {
+	// 	font-size: calc((13px + (200vw - 1920px) / 192) * .625);
+	// }
+	// @include mx-mq-min(1440px) {
+	// 	font-size: calc((16px + (200vw - 2560px) / 256) * .625);
+	// }
+	font-size: 62.5%;
 	// overflow-x: hidden;
 	overflow-x: clip;
 	max-width: 100vw;
@@ -118,4 +118,8 @@ video {
 .wrapper {
 	background-color: $color_primary;
 	overflow: hidden;
+	&.wrapper--white {
+		background-color: $color_white;
+	}
 }
+

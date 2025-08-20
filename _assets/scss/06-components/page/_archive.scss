@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* ================================================================================ */ 
+/* Archive */ 
+/* 一覧ページのスタイル */ 
+/* ================================================================================ */ 
+
+
+// -----------------------------------------------------------------
+// MAIN
+// -----------------------------------------------------------------
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.archive-grid__item {
+
+}
+
+.archive-thumbanil {
+
+}
+
+.archive-cat {
+    display: inline-block;
+    font-size: 1.2rem;
+    background-color: $color_main;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.archive-new-badge {
+    display: inline-flex;
+    margin-left: 8px;
+    img {
+        height: 12px;
+        width: auto;
+    }
+}
+
+.archive-headline {
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+.archive-date {
+    margin: 0;
+    color: #767676;
+    font-size: 1.1rem;
+}
