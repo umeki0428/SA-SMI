@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/* ================================================================================ */ 
+/* content */ 
+/* 固定ページのデフォルトスタイル */ 
+/* ================================================================================ */ 
+
+.site-content {
+    line-height: 1.6;
+    color: #000;
+    h2 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    h3 {
+        font-size: 2.0rem;
+        font-weight: bold;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    hr {
+        border: none;
+        height: 2px;
+        background-color: #C9CACA;
+        border-radius: 1px;
+        margin: 60px 0;
+    }
+    span {
+        color: $color_main;
+    }
+}
+
+.site-content-btn-wrap {
+    text-align: center;
+}
+
+.site-content-btn {
+    display: inline-block;
+    padding: 20px 48px;
+    background-color: $color_main;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    &:before {
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: url(../../assets/images/btn-arrow.svg)no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: 25px;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+    }
+    &:hover {
+        opacity: .7;
+    }
+}
+
+

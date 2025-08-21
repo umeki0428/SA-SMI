@@ -12,14 +12,25 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
+    @media #{$sm_devices_only} {
+        grid-template-columns: 1fr;
+    }
 }
 
 .archive-grid__item {
-
+    @media #{$sm_devices_only} {
+        display: flex;
+    }
 }
 
 .archive-thumbanil {
 
+}
+
+.archive-textcontent {
+    @media #{$sm_devices_only} {
+        margin-left: 20px;
+    }
 }
 
 .archive-cat {
