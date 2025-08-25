@@ -568,28 +568,3 @@
 .front-payment-button {
     text-align: center;
 }
-
-.button {
-    background-color: $color_main;
-    color: #fff;
-    font-size: 1.4rem;
-    padding: .5rem 1.6rem;
-    border-radius: 100vmax;
-    display: inline-block;
-    
-    span {
-        display: inline-flex;
-        gap: .6rem;
-        align-items: center;
-        position: relative;
-        &:after {
-            content: "";
-            aspect-ratio: 16 / 18;
-            width: .8rem;
-            align-items: center;
-            background-image: url(../../assets/images/button-arrow.svg);
-            background-size: cover;
-            display: inline-block;
-        }
-    }
-}

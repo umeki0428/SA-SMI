@@ -4,70 +4,169 @@
 /* ヘッダーのスタイル */ 
 /* ================================================================================ */ 
 
+.home {
+    .site-header {
+        position: absolute;
+        top: 6rem;
+        left: 4rem;
+        right: 4rem;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media #{$md-devices} {
+            top: 5.4rem;
+            left: 6.4rem;
+            right: 6.4rem;
+        }
+    }
+    
+    .site-branding {
+        max-width: 21.5rem;
+    }
+    
+    .site-navigation {
+        position: absolute;
+        bottom: 0;
+        left: 8rem;
+        z-index: 1;
+        @media #{$sm-devices-only} {
+            display: none;
+        }
+    }
+    
+    .site-navigation-lists {
+        list-style: none;
+        padding: 0 0 1.6rem 3.2rem;
+        border-left: 1px solid #fff;
+        margin: 0;
+    }
+    
+    .site-navigation-list {
+        margin-bottom: 2.4rem;
+    }
+    
+    .site-navigation-list__link {
+        font-size: 1.5rem;
+        color: #fff;
+        display: block;
+        font-weight: 700;
+    }
+    
+    .site-menu-button {
+        width: 4rem;
+        height: 3.5rem;
+        position: relative;
+    }
+    
+    .dropdown-icon__line {
+        border-radius: 100vmax;
+        background-color: #fff;
+        height: .5rem;
+        width: 100%;
+        inset: 0;
+        margin: auto;
+        z-index: 1;
+        position: absolute;
+        &:first-of-type {
+            bottom: auto;
+        }
+        &:last-of-type {
+            top: auto;
+        }
+    }
+}
+
 
 .site-header {
-    position: absolute;
-    top: 6rem;
-    left: 4rem;
-    right: 4rem;
-    z-index: 100;
+    min-height: 17rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: space-between;
-    @media #{$md-devices} {
-        top: 5.4rem;
-        left: 6.4rem;
-        right: 6.4rem;
+    padding: 0 2.4rem;
+    gap: 3.2rem;
+    &::after {
+        width: 170%;
+        aspect-ratio: 1836 / 713;
+        background-color: $color_main;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 100%;
+        @media #{$md-devices} {
+            width: 250%;
+        }
     }
 }
 
 .site-branding {
-    max-width: 21.5rem;
-}
-
-.site-navigation {
-    position: absolute;
-    bottom: 0;
-    left: 8rem;
-    z-index: 1;
-    @media #{$sm-devices-only} {
-        display: none;
-    }
-}
-
-.site-navigation-lists {
-    list-style: none;
-    padding: 0 0 1.6rem 3.2rem;
-    border-left: 1px solid #fff;
-    margin: 0;
-}
-
-.site-navigation-list {
-    margin-bottom: 2.4rem;
-}
-
-.site-navigation-list__link {
-    font-size: 1.5rem;
-    color: #fff;
-    display: block;
-    font-weight: 700;
-}
-
-.site-menu-button {
-    width: 4rem;
-    height: 3.5rem;
-    position: relative;
-}
-
-.dropdown-icon__line {
-    border-radius: 100vmax;
-    background-color: #fff;
-    height: .5rem;
-    width: 100%;
+    max-width: 18rem;
+    height: fit-content;
     inset: 0;
     margin: auto;
     z-index: 1;
     position: absolute;
+}
+
+.site-navigation {
+    position: fixed;
+    background: $color_main;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    padding-left: 2.4rem;
+    padding-top: 4.8rem;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.site-navigation-lists {
+    margin: 0 0 4.8rem;
+    padding-left: 2.4rem;
+}
+
+.site-navigation-list {
+    list-style: none;
+    &:not(:last-of-type) {
+        margin-bottom: 2.4rem;
+    }
+}
+
+.site-navigation-list__link {
+    color: #fff;
+    font-family: $fontTtl;
+    font-size: 1.6rem;
+}
+
+.site-language {
+    font-family: $fontTtl;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.site-menu-button {
+    width: 3.2rem;
+    height: 2rem;
+    position: relative;
+    display: block;
+}
+
+.dropdown-icon__line {
+    position: absolute;
+    height: .4rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 100vmax;
+    inset: 0;
     &:first-of-type {
         bottom: auto;
     }

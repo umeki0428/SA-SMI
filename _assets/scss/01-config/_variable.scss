@@ -56,7 +56,10 @@ $xxl_devices: "print, only screen and ( min-width: #{$breakpoint_2xl} )";
 // ----------------------------------------------------------------
 
 // ベースフォント
-$font: "fot-tsukuardgothic-std", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+$font: "Noto Sans JP", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+
+// 見出しフォント
+$fontTtl: "fot-tsukuardgothic-std", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 
 // ----------------------------------------------------------------
 // Color

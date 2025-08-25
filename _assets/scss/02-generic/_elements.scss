@@ -116,10 +116,13 @@ video {
 // ----------------------------------------------------------------
 
 .wrapper {
-	background-color: $color_primary;
 	overflow: hidden;
-	&.wrapper--white {
-		background-color: $color_white;
+	background-color: $color_white;
+}
+
+.home {
+	.wrapper {
+		background-color: $color_primary;
 	}
 }
 
